@@ -1,8 +1,10 @@
-name: CI
+name: CI-Frontend
 
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'src/Frontend/**'
   pull_request:
     branches: [ main ]
   workflow_dispatch:
