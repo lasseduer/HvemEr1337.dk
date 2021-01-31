@@ -20,6 +20,10 @@ jobs:
         with:
           node-version: 14.15.4
           
+      - name: npm ci
+        working-directory: src/Frontend
+        run: npm ci   
+          
       - name: npm run test
         working-directory: src/Frontend
         run: npm run test
