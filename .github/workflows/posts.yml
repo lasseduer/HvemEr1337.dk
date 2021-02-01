@@ -32,5 +32,5 @@ jobs:
       - name: publish code coverage
         uses: coverallsapp/github-action@master
         with:
-          github-token: ih3GJjPjMdQhe59tWsb5DQ4RM4XHraGrJ
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           path-to-lcov: src/Backend/Posts/test/Posts.Domain.Test/TestResults/coverage.info
