@@ -27,10 +27,10 @@ jobs:
 
       - name: dotnet test
         working-directory: src/Backend/Posts
-        run: dotnet test --collect:"XPlat Code Coverage"
+        run: dotnet test /p:CollectCoverage=true /p:CoverletOutput=TestResults/ /p:CoverletOutputFormat=lcov
 
       - name: publish code coverage
         uses: coverallsapp/github-action@master
         with:
           github-token: ih3GJjPjMdQhe59tWsb5DQ4RM4XHraGrJ
-          path-to-lcov: src/Backend/Posts/TestResults/**/coverage.cobertura.xml
+          path-to-lcov: src/Backend/Posts/test/Posts.Domain.Test/TestResults/coverage.info
